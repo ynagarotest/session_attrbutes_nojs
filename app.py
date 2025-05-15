@@ -7,6 +7,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    # app.py の index 関数の最初の方に挿入
+    print("DEBUG: index function started") # ★これがログに見えるか？
+    print(json.dumps({"debug_message": "simple json test"})) # ★これがjsonPayloadとして見えるか？
+
     # クエリパラメータを取得
     gad_source = request.args.get('gad_source')
     gad_campaignid = request.args.get('gad_campaignid')
