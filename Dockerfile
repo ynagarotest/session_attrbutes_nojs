@@ -20,5 +20,5 @@ COPY . .
 # gunicornを使用してFlaskアプリケーションを起動
 # 0.0.0.0 は全てのネットワークインターフェースでリッスン
 # ${PORT} はCloud Runによって提供される環境変数 (ローカルテストでは8080を想定)
-#CMD ["python", "app.py"]
-CMD exec gunicorn --bind 0.0.0.0:${PORT} --workers 1 --threads 8 --timeout 0 app:app
+CMD ["python", "app.py"]
+#CMD exec gunicorn --bind 0.0.0.0:${PORT} --workers 1 --threads 8 --timeout 0 app:app
